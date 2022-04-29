@@ -1,5 +1,3 @@
-
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -20,15 +18,13 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
-
   final signupFormKey = GlobalKey<FormState>();
   final emailFormKey = GlobalKey<FormState>();
   final passwordFormKey = GlobalKey<FormState>();
 
-  TextEditingController  fullname = TextEditingController();
-  TextEditingController  emailadd = TextEditingController();
-  TextEditingController  password = TextEditingController();
-
+  TextEditingController fullname = TextEditingController();
+  TextEditingController emailadd = TextEditingController();
+  TextEditingController password = TextEditingController();
 
   bool obscuretext = true;
 
@@ -44,7 +40,6 @@ class _CreateAccountState extends State<CreateAccount> {
         passwordFormKey.currentState!.validate();
       }
     });
-
   }
 
   @override
@@ -106,97 +101,95 @@ class _CreateAccountState extends State<CreateAccount> {
                 height: 20,
               ),
               Form(
-                key: signupFormKey,
+                  key: signupFormKey,
                   child: Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                        color: const Color(0xffF3F2F2),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: TextFormField(
-                      controller:  fullname,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Field can\'t be empty';
-                        }
-                        return null;
-                      },
-                      decoration: const InputDecoration(
-                          hintText: "Full Name",
-                          // suffixIcon: Padding(
-                          //   padding: const EdgeInsets.all(10.0),
-                          //   child: Image.asset(
-                          //     'assets/images/done.png',
-                          //   ),
-                          // ),
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.all(5)),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Form(
-                    key: emailFormKey,
-                    child: Container(
-                      margin: const EdgeInsets.all(0),
-                      decoration: BoxDecoration(
-                          color: const Color(0xffF3F2F2),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: TextFormField(
-                        controller:  emailadd,
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Field can\'t be empty';
-                          }
-                          return null;
-                        },
-                        decoration: const InputDecoration(
-                            hintText: "Email Address",
-                            // suffixIcon: Padding(
-                            //   padding: const EdgeInsets.all(10.0),
-                            //   child: Image.asset(
-                            //     'assets/images/done.png',
-                            //   ),
-                            // ),
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(5)),
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.all(0),
+                        decoration: BoxDecoration(
+                            color: const Color(0xffF3F2F2),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: TextFormField(
+                          controller: fullname,
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Field can\'t be empty';
+                            }
+                            return null;
+                          },
+                          decoration: const InputDecoration(
+                              hintText: "Full Name",
+                              // suffixIcon: Padding(
+                              //   padding: const EdgeInsets.all(10.0),
+                              //   child: Image.asset(
+                              //     'assets/images/done.png',
+                              //   ),
+                              // ),
+                              border: InputBorder.none,
+                              contentPadding: EdgeInsets.all(5)),
+                        ),
                       ),
-                    ),
-                  ),
-                   const SizedBox(
-                    height: 15,
-                  ),
-                   Form(
-                     key: passwordFormKey,
-                     child: Container(
-                      decoration: BoxDecoration(
-                          color: const Color(0xffF3F2F2),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: TextFormField(
-                        controller: password,
-
-                        obscureText: false,
-                        decoration:  InputDecoration(
-                            hintText: "Password",
-                            suffixIcon: GestureDetector(
-                                onTap: (){
-                                  setState(() {
-                                    obscuretext=!obscuretext;
-                                  });
-                                },
-                                child: Icon(
-                                    obscuretext? Icons.visibility_off:Icons.visibility
-                                )),
-
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.all(5)),
+                      const SizedBox(
+                        height: 15,
                       ),
-                  ),
-                   ),
-                ],
-              )),
+                      Form(
+                        key: emailFormKey,
+                        child: Container(
+                          margin: const EdgeInsets.all(0),
+                          decoration: BoxDecoration(
+                              color: const Color(0xffF3F2F2),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: TextFormField(
+                            controller: emailadd,
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Field can\'t be empty';
+                              }
+                              return null;
+                            },
+                            decoration: const InputDecoration(
+                                hintText: "Email Address",
+                                // suffixIcon: Padding(
+                                //   padding: const EdgeInsets.all(10.0),
+                                //   child: Image.asset(
+                                //     'assets/images/done.png',
+                                //   ),
+                                // ),
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.all(5)),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Form(
+                        key: passwordFormKey,
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: const Color(0xffF3F2F2),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: TextFormField(
+                            controller: password,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                                hintText: "Password",
+                                suffixIcon: GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        obscuretext = !obscuretext;
+                                      });
+                                    },
+                                    child: Icon(obscuretext
+                                        ? Icons.visibility_off
+                                        : Icons.visibility)),
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.all(5)),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )),
               SizedBox(
                 height: 10,
               ),
@@ -212,36 +205,26 @@ class _CreateAccountState extends State<CreateAccount> {
                         MaterialStateProperty.all<Color>(Colors.white),
                   ),
                   onPressed: () {
-                        Get.to(Bottom());
+                    Get.to(Bottom());
 
-                    // Client register = Client();
-                    // AuthEndPointProvider authPoint = AuthEndPointProvider(client: register.init());
-                    // authPoint.signUp( fullname.text,  emailadd.text,  password.text);
-
-
-
+                    Client register = Client();
+                    AuthEndPointProvider authPoint =
+                        AuthEndPointProvider(client: register.init());
+                    authPoint.signUp(
+                        fullname.text, emailadd.text, password.text);
 
                     setState(() {
                       GetUtils.isLengthGreaterThan(fullname.text, 6)
                           ? print('Name is valid')
-
                           : print('Name is invalid!!!');
                       GetUtils.isPhoneNumber(password.text)
-
                           ? print('Password')
-
                           : print('Enter Valid Password');
 
                       GetUtils.isEmail(emailadd.text)
-
                           ? print('Email is valid')
-
                           : print('Email is invalid!!!');
                     });
-
-
-
-
                   },
                   child: const Text(
                     "SIGN UP",
@@ -359,14 +342,15 @@ class _CreateAccountState extends State<CreateAccount> {
     );
   }
 
-
   bool isEmail(String em) {
     return RegExp(
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
         .hasMatch(em);
   }
+
   bool validatePassword(String value) {
-    return RegExp(r'^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')
+    return RegExp(
+            r'^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$')
         .hasMatch(value);
   }
 }

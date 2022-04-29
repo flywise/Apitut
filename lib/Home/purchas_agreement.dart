@@ -36,9 +36,10 @@ class PurchaseAgreement extends GetView<PurchaseAggrementController> {
                   shrinkWrap: true,
                   itemCount: state!.length,
                   itemBuilder: (context, index) => Container(
-                    // child: Image.network(state[index].subCategoryImg.url),
-                    child: Text((state[index].id).toString()),
-                  ),
+                       child: Image.network(
+                          (state[index].subCategoryImg.url).toString()),
+                      // child: Text((state[index].subCategoryImg.filename)),
+                      ),
                 ),
               )),
           SizedBox(

@@ -1,0 +1,130 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.ninety_two"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:3:5-66
+11-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:4:6-83
+12-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:4:23-81
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:5:7-83
+13-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:5:24-81
+14
+15    <queries>
+15-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:9:5-15:15
+16        <intent>
+16-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:10:9-14:18
+17            <action android:name="android.intent.action.GET_CONTENT" />
+17-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:11:13-72
+17-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:11:21-69
+18
+19            <data android:mimeType="*/*" />
+19-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:13:13-44
+19-->[:file_picker] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:13:19-41
+20        </intent>
+21    </queries>
+22
+23    <application
+24        android:name="android.app.Application"
+24-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:8:9-42
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.6.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\122df2e57d294d1a53db26bbc3b813c1\core-1.6.0\AndroidManifest.xml:24:18-86
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:9:9-43
+27        android:label="ninety_two" >
+27-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:7:9-35
+28        <activity
+28-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:10:9-30:20
+29            android:name="com.example.ninety_two.MainActivity"
+29-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:11:13-41
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+30-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:15:13-163
+31            android:exported="true"
+31-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:12:13-36
+32            android:hardwareAccelerated="true"
+32-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:16:13-47
+33            android:launchMode="singleTop"
+33-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:13:13-43
+34            android:theme="@style/LaunchTheme"
+34-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:14:13-47
+35            android:windowSoftInputMode="adjustResize" >
+35-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:17:13-55
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43            <meta-data
+43-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:22:13-25:17
+44                android:name="io.flutter.embedding.android.NormalTheme"
+44-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:23:15-70
+45                android:resource="@style/NormalTheme" />
+45-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:24:15-52
+46
+47            <intent-filter>
+47-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:26:13-29:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:27:17-68
+48-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:27:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:28:17-76
+50-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:28:27-74
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+57-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:33:9-35:33
+58            android:name="flutterEmbedding"
+58-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:34:13-44
+59            android:value="2" />
+59-->C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\android\app\src\main\AndroidManifest.xml:35:13-30
+60
+61        <provider
+61-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:8:9-16:20
+62            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+62-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:9:13-82
+63            android:authorities="com.example.ninety_two.flutter.image_provider"
+63-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:10:13-74
+64            android:exported="false"
+64-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:11:13-37
+65            android:grantUriPermissions="true" >
+65-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:12:13-47
+66            <meta-data
+66-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:13:13-15:75
+67                android:name="android.support.FILE_PROVIDER_PATHS"
+67-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:14:17-67
+68                android:resource="@xml/flutter_image_picker_file_paths" />
+68-->[:image_picker_android] C:\Users\user\Downloads\92-Genration-Frontend-main\92-Genration-Frontend-main\build\image_picker_android\intermediates\library_manifest\release\AndroidManifest.xml:15:17-72
+69        </provider>
+70
+71        <uses-library
+71-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+72            android:name="androidx.window.extensions"
+72-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+73            android:required="false" />
+73-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+74        <uses-library
+74-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+75            android:name="androidx.window.sidecar"
+75-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+76            android:required="false" />
+76-->[androidx.window:window:1.0.0-beta04] C:\Users\user\.gradle\caches\transforms-2\files-2.1\03c633e46d75bfb21f082f0417f55161\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+77    </application>
+78
+79</manifest>

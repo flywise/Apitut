@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ninety_two/Home/cart.dart';
 import 'package:ninety_two/Home/purchas_agreement.dart';
+import 'package:ninety_two/formfield/form_field.dart';
 
 class HomeAgree extends StatefulWidget {
   String? heading;
   String? subtitle;
   String? qar;
-  HomeAgree({Key? key, this.heading, this.subtitle, this.qar}) : super(key: key);
+  HomeAgree({Key? key, this.heading, this.subtitle, this.qar})
+      : super(key: key);
 
   @override
   State<HomeAgree> createState() => _HomeAgreeState();
@@ -36,8 +38,7 @@ class _HomeAgreeState extends State<HomeAgree> {
                           widget.heading!,
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        subtitle: Text(
-                           widget.subtitle!),
+                        subtitle: Text(widget.subtitle!),
                       ),
                     ),
                     Container(
@@ -66,7 +67,7 @@ class _HomeAgreeState extends State<HomeAgree> {
                                                 Colors.white),
                                       ),
                                       onPressed: () {
-                                        Get.to(PurchaseAgreement());
+                                        Get.to(FormFieldData());
                                       },
                                       child: const Text(
                                         "View Document",
