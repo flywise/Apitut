@@ -30,19 +30,26 @@ class AuthEndPointProvider {
         g.Get.to(() => Bottom());
       } else {
         CommonLoader.showErrorDialog(description: r.data["error"]);
+        CommonLoader.hideLoading();
       }
     } on DioError catch (e) {
       //hide loading
       //show error dialog
       CommonLoader.showErrorDialog(description: e.message);
+      CommonLoader.hideLoading();
     }
   }
 
   ///Register
   signUp(String name, String email, String pass) async {
+    CommonLoader.showLoading();
     var data = {"name": name, "email": email, "password": pass};
     try {
-      Response r = await client.post("/api/user/signup", data: data,);
+      Response r = await client.post(
+        "/api/user/signup",
+        data: data,
+      );
+      CommonLoader.hideLoading();
       if (r.statusCode == 200) {
         print('account sucessfully');
         // CommonLoader.showSuccessDialog(title: 'Success');

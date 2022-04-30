@@ -1,4 +1,4 @@
-#Fri Apr 29 18:52:29 IST 2022
+#Sat Apr 30 14:35:33 IST 2022
 base.0=C\:\\Users\\user\\Downloads\\92-Genration-Frontend-main\\92-Genration-Frontend-main\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

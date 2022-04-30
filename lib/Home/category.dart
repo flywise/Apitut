@@ -7,9 +7,10 @@ import 'package:ninety_two/api_provider/provider/category_provider.dart';
 import 'package:ninety_two/controllers/category_controller.dart';
 
 class Category extends GetView<CategoryController> {
-   CategoryController categoryController = Get.put(CategoryController());
-  
-  HomeAggrementController homeAggrementController = Get.put(HomeAggrementController());
+  CategoryController categoryController = Get.put(CategoryController());
+
+  HomeAggrementController homeAggrementController =
+      Get.put(HomeAggrementController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,18 +71,19 @@ class Category extends GetView<CategoryController> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  homeAggrementController.categoryId = catstate[index].id!;
+                                  homeAggrementController.categoryId =
+                                      catstate[index].id;
                                   homeAggrementController.callGetAggrementApi();
                                   Get.to(HomeAgreement());
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: ListTile(
-                                    title: Text(catstate[index].title!),
+                                    title: Text(catstate[index].title),
                                     leading: Container(
                                       height: 100,
                                       child: Image.network(
-                                        catstate[index].img!.url!,
+                                        (catstate[index].img.url).toString(),
                                         fit: BoxFit.cover,
                                         errorBuilder: (context, _, __) =>
                                             Container(
@@ -91,7 +93,7 @@ class Category extends GetView<CategoryController> {
                                         ),
                                       ),
                                     ),
-                                    subtitle: Text(catstate[index].descrption!),
+                                    subtitle: Text(catstate[index].descrption),
                                   ),
                                 ),
                               ),

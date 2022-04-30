@@ -16,7 +16,6 @@ class _SignInState extends State<SignIn> {
   final loginFormKey = GlobalKey<FormState>();
   final emailFormKey = GlobalKey<FormState>();
 
-
   TextEditingController _email = TextEditingController();
   TextEditingController _pass = TextEditingController();
 
@@ -59,7 +58,7 @@ class _SignInState extends State<SignIn> {
             ),
             Row(
               children: [
-                  const Text(
+                const Text(
                   "sign in or, ",
                   style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
@@ -84,71 +83,64 @@ class _SignInState extends State<SignIn> {
             Form(
                 key: loginFormKey,
                 child: Column(
-                children: [
-                 Form(
-                  key: emailFormKey,
-                  child: Container(
-                    margin: const EdgeInsets.all(0),
-                    decoration: BoxDecoration(
-                        color: const Color(0xffF3F2F2),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: TextFormField(
-                      controller: _email,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Field can\'t be empty';
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(
-                          hintText: "Email",
-                          suffixIcon: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Image.asset(
-                              'assets/images/phone.png',
-                            ),
-                          ),
-                          border: InputBorder.none,
-                          contentPadding: const EdgeInsets.all(5)),
+                  children: [
+                    Form(
+                      key: emailFormKey,
+                      child: Container(
+                        margin: const EdgeInsets.all(0),
+                        decoration: BoxDecoration(
+                            color: const Color(0xffF3F2F2),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: TextFormField(
+                          controller: _email,
+                          decoration: InputDecoration(
+                              hintText: "Email",
+                              suffixIcon: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Image.asset(
+                                  'assets/images/phone.png',
+                                ),
+                              ),
+                              border: InputBorder.none,
+                              contentPadding: const EdgeInsets.all(5)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                    const SizedBox(
+                      height: 15,
+                    ),
 
-                //Password
-                Container(
-                  margin: const EdgeInsets.all(0),
-                  decoration: BoxDecoration(
-                      color: const Color(0xffF3F2F2),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: TextFormField(
-                    controller: _pass,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Field can\'t be empty';
-                      }
-                      return null;
-                    },
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        hintText: "Password",
-                        suffixIcon: GestureDetector(
-                            onTap: (){
-                              setState(() {
-                                obscuretext=!obscuretext;
-                              });
-                            },
-                            child: Icon(
-                                obscuretext? Icons.visibility_off:Icons.visibility
-                            )),
-                        border: InputBorder.none,
-                        contentPadding: const EdgeInsets.all(5)),
-                  ),
-                ),
-              ],
-            )),
+                    //Password
+                    Container(
+                      margin: const EdgeInsets.all(0),
+                      decoration: BoxDecoration(
+                          color: const Color(0xffF3F2F2),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: TextFormField(
+                        controller: _pass,
+                        validator: (val) {
+                          if (val == "") {
+                            return "Enter Valid Password and Email";
+                          }
+                        },
+                        obscureText: obscuretext,
+                        decoration: InputDecoration(
+                            hintText: "Password",
+                            suffixIcon: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    obscuretext = !obscuretext;
+                                  });
+                                },
+                                child: Icon(obscuretext
+                                    ? Icons.visibility
+                                    : Icons.visibility_off)),
+                            border: InputBorder.none,
+                            contentPadding: const EdgeInsets.all(5)),
+                      ),
+                    ),
+                  ],
+                )),
             const SizedBox(
               height: 15,
             ),
@@ -157,8 +149,7 @@ class _SignInState extends State<SignIn> {
               children: [
                 InkWell(
                   onTap: () {
-                    Get.to(()=> ForgetPassword());
-
+                    Get.to(() => ForgetPassword());
                   },
                   child: const Text(
                     "Forget Password?",
@@ -180,11 +171,13 @@ class _SignInState extends State<SignIn> {
                   foregroundColor:
                       MaterialStateProperty.all<Color>(Colors.white),
                 ),
-
-                onPressed: ()   {
-                  Client client = Client();
-                  AuthEndPointProvider authEndPointProvider = AuthEndPointProvider(client: client.init());
-                  authEndPointProvider.signIn(_email.text, _pass.text);
+                onPressed: () {
+                  if (loginFormKey.currentState!.validate()) {
+                    Client client = Client();
+                    AuthEndPointProvider authEndPointProvider =
+                        AuthEndPointProvider(client: client.init());
+                    authEndPointProvider.signIn(_email.text, _pass.text);
+                  }
                 },
                 child: const Text("SIGN IN"),
               ),
